@@ -18,7 +18,7 @@ export const siteConfig = {
   whatsappMessage:
     "Hi! I found your portfolio and I'd like to discuss my VU project/assignment.",
 
-  email: "contact@scholarstack.dev",
+  email: "muhammadzohaib4042@gmail.com",
 };
 
 // ─────────────────────────────────────────────────────────────────────────
@@ -34,25 +34,25 @@ export const siteConfig = {
 export const partners = [
   {
     id: "partner-1",
-    name: "Ahmed Raza",
-    semester: "7th Semester · BS Computer Science",
+    name: "Musharib Ahmad Khan",
+    semester: "BS Computer Science",
     bio: "I focus on backend architecture and database design. I've supervised 20+ VU final year projects end-to-end, from proposal defense to final viva.",
     image: null, // e.g. "/ahmed.jpg"
     initials: "AR",
-    github: "https://github.com/ahmedraza",
-    linkedin: "https://linkedin.com/in/ahmedraza",
+    github: "",
+    linkedin: "",
   },
   {
     id: "partner-2",
-    name: "Bilal Khan",
-    semester: "7th Semester · BS Software Engineering",
+    name: "Muhammad Zohaib",
+    semester: "4th Semester · BS Computer Science",
     bio: "I handle front-end development and LMS coordination — keeping GDBs, quizzes and assignment uploads on schedule so clients never miss a deadline.",
     image: null, // e.g. "/bilal.jpg"
     initials: "BK",
     // Example of the conditional-rendering feature: this partner has no
     // GitHub link yet, so the GitHub icon will simply not appear on his card.
-    github: "",
-    linkedin: "https://linkedin.com/in/bilalkhan",
+    github: "https://github.com/m-zohab/",
+    linkedin: "",
   },
 ];
 
