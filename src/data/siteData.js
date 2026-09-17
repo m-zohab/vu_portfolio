@@ -37,7 +37,7 @@ export const partners = [
     name: "Musharib Ahmad Khan",
     semester: "BS Computer Science",
     bio: "I focus on backend architecture and database design. I've supervised 20+ VU final year projects end-to-end, from proposal defense to final viva.",
-    image: null, // e.g. "/ahmed.jpg"
+    image: "zohab.jpeg",
     initials: "AR",
     github: "",
     linkedin: "",
