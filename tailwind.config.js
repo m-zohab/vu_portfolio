@@ -10,9 +10,7 @@ export default {
       },
 
       colors: {
-        // ─────────────────────────────────────────────
-        // Primary Blue
-        // ─────────────────────────────────────────────
+        // Primary blue
         brand: {
           50: "#eff6ff",
           100: "#dbeafe",
@@ -26,9 +24,7 @@ export default {
           900: "#1e3a8a",
         },
 
-        // ─────────────────────────────────────────────
-        // Text / Slate
-        // ─────────────────────────────────────────────
+        // Dark text / slate tones
         ink: {
           50: "#f8fafc",
           100: "#f1f5f9",
@@ -43,9 +39,7 @@ export default {
           950: "#020617",
         },
 
-        // ─────────────────────────────────────────────
-        // WhatsApp / Success
-        // ─────────────────────────────────────────────
+        // WhatsApp / success
         sage: {
           50: "#ecfdf5",
           100: "#d1fae5",
@@ -55,17 +49,14 @@ export default {
           700: "#047857",
         },
 
-        // ─────────────────────────────────────────────
-        // Light Blue Page Background
-        // ─────────────────────────────────────────────
+        // Light blue page backgrounds
         paper: {
           DEFAULT: "#f4f8ff",
           deep: "#eef5ff",
         },
 
-        // ─────────────────────────────────────────────
-        // Gold kept for compatibility
-        // ─────────────────────────────────────────────
+        // Kept for existing components that still use gold-* classes.
+        // Visually mapped to the blue theme.
         gold: {
           50: "#eff6ff",
           100: "#dbeafe",
