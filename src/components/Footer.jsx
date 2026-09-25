@@ -9,18 +9,18 @@ export default function Footer() {
   )}`;
 
   return (
-    <footer className="border-t border-ink-100 bg-paper-deep">
+    <footer className="border-t border-white/10 bg-paper-deep">
       <div className="section-container flex flex-col gap-10 py-14 md:flex-row md:items-start md:justify-between">
         <div className="max-w-xs">
           <Link to="/" className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-ink-700 text-white">
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gold-500 text-ink-950">
               <GraduationCap size={16} strokeWidth={2.25} />
             </span>
-            <span className="font-display text-base font-bold text-ink-950">
+            <span className="font-display text-base font-bold text-white">
               {siteConfig.brandName}
             </span>
           </Link>
-          <p className="mt-3 text-sm leading-relaxed text-ink-500">
+          <p className="mt-3 text-sm leading-relaxed text-ink-200">
             {siteConfig.tagline} — helping Virtual University students with
             FYPs, assignments, quizzes and LMS handling.
           </p>
@@ -28,13 +28,13 @@ export default function Footer() {
 
         <div className="flex flex-wrap gap-x-16 gap-y-10">
           <div>
-            <p className="text-sm font-semibold text-ink-950">Explore</p>
-            <ul className="mt-3 space-y-2 text-sm text-ink-500">
+            <p className="text-sm font-semibold text-white">Explore</p>
+            <ul className="mt-3 space-y-2 text-sm text-ink-200">
               {navLinks
                 .filter((link) => link.to !== "/")
                 .map((link) => (
                   <li key={link.to}>
-                    <Link to={link.to} className="hover:text-ink-700">
+                    <Link to={link.to} className="hover:text-white">
                       {link.label}
                     </Link>
                   </li>
@@ -43,12 +43,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold text-ink-950">Get in touch</p>
-            <ul className="mt-3 space-y-2 text-sm text-ink-500">
+            <p className="text-sm font-semibold text-white">Get in touch</p>
+            <ul className="mt-3 space-y-2 text-sm text-ink-200">
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="inline-flex items-center gap-1.5 hover:text-ink-700"
+                  className="inline-flex items-center gap-1.5 hover:text-white"
                 >
                   <Mail size={14} /> Email
                 </a>
@@ -58,7 +58,7 @@ export default function Footer() {
                   href={whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 hover:text-ink-700"
+                  className="inline-flex items-center gap-1.5 hover:text-white"
                 >
                   <MessageCircle size={14} /> WhatsApp
                 </a>
@@ -68,8 +68,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-ink-100 py-6">
-        <p className="section-container text-center text-xs text-ink-400">
+      <div className="border-t border-white/10 py-6">
+        <p className="section-container text-center text-xs text-ink-300">
           © {year} {siteConfig.brandName}. Built by two VU students, for VU
           students.
         </p>
