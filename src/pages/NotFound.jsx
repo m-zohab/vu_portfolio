@@ -11,16 +11,16 @@ export default function NotFound() {
       />
       <section className="flex min-h-[60vh] items-center bg-paper py-20">
         <div className="section-container text-center">
-          <p className="font-display text-7xl font-bold text-ink-200">404</p>
-          <h1 className="mt-4 text-2xl font-bold text-ink-950 sm:text-3xl">
+          <p className="font-display text-7xl font-bold text-white/10">404</p>
+          <h1 className="mt-4 text-2xl font-bold text-white sm:text-3xl">
             This page wandered off somewhere
           </h1>
-          <p className="mt-3 text-ink-500">
+          <p className="mt-3 text-ink-200">
             The page you're looking for doesn't exist or may have moved.
           </p>
           <Link
             to="/"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-ink-700 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink-800"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-ink-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink-500"
           >
             <Home size={16} />
             Back to home
