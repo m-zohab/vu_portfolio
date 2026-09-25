@@ -10,49 +10,52 @@ export default {
         display: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       colors: {
-        // "Ink" — the primary brand hue, a muted blue-violet rather than a
-        // stock Tailwind indigo. Doubles as the near-black used for text.
+        // Light theme primary brand colors (Modern Blue)
+        brand: {
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb", // Primary action color
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
+        },
+        // "Ink" — mapped to Slate text tones for high contrast on light backgrounds
         ink: {
-          50: "#F2F1FA",
-          100: "#E7E6F3",
-          200: "#CFCCE8",
-          300: "#ACA6D6",
-          400: "#7A73B8",
-          500: "#5952B0",
-          600: "#433D9B",
-          700: "#332F7D",
-          800: "#2B2769",
-          900: "#221F52",
-          950: "#1B1A3B",
+          50: "#f8fafc",
+          100: "#f1f5f9",
+          200: "#e2e8f0",
+          300: "#cbd5e1",
+          400: "#94a3b8",
+          500: "#64748b",
+          600: "#475569",
+          700: "#334155",
+          800: "#1e293b",
+          900: "#0f172a",
+          950: "#020617",
         },
-        // "Gold" — a muted antique gold accent (academic seal / graduation
-        // tassel), used sparingly against the ink palette.
-        gold: {
-          100: "#F6E9CF",
-          200: "#EBD5A3",
-          300: "#E4C078",
-          500: "#C9973D",
-          600: "#B8862E",
-          700: "#96701F",
-        },
-        // "Sage" — the functional success/checkmark colour.
+        // "Sage / Emerald" — functional success and WhatsApp action colors
         sage: {
-          100: "#DFF3E9",
-          500: "#2E9E6D",
-          600: "#25845A",
+          50: "#ecfdf5",
+          100: "#d1fae5",
+          500: "#10b981",
+          600: "#059669",
+          700: "#047857",
         },
-        // Page background — a rich dark navy blue (per client request),
-        // with "deep" used for alternating sections.
+        // Page background palette for light-blue system
         paper: {
-          DEFAULT: "#161A3D",
-          deep: "#1F2350",
+          DEFAULT: "#f3f7fc", // Primary light blue-grey section background
+          deep: "#ffffff",    // Pure white for alternating/card backgrounds
         },
       },
       boxShadow: {
-        soft: "0 2px 14px rgba(27, 26, 59, 0.07)",
-        card: "0 10px 32px rgba(27, 26, 59, 0.10)",
-        lift: "0 18px 40px rgba(27, 26, 59, 0.16)",
-        gold: "0 10px 28px rgba(184, 134, 46, 0.28)",
+        soft: "0 2px 14px rgba(15, 23, 42, 0.04)",
+        card: "0 10px 32px rgba(15, 23, 42, 0.06)",
+        lift: "0 18px 40px rgba(15, 23, 42, 0.10)",
+        brand: "0 10px 28px rgba(37, 99, 235, 0.20)",
       },
       keyframes: {
         float: {
