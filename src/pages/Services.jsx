@@ -23,8 +23,11 @@ export default function Services() {
         description="Pick one service or let us run your whole semester — every service below is handled directly by the two of us."
       />
 
-      <section className="bg-paper py-16 lg:py-24">
-        <div className="section-container">
+      <section className="relative overflow-hidden bg-[#f3f7fc] py-16 lg:py-24">
+        {/* Subtle background grid */}
+        <div className="grid-texture pointer-events-none absolute inset-0 opacity-50" />
+
+        <div className="section-container relative">
           <Reveal>
             <SectionHeading
               align="left"
@@ -33,7 +36,7 @@ export default function Services() {
             />
           </Reveal>
 
-          <div className="mt-10 rounded-2xl border border-white/10 bg-ink-800/40 px-2 sm:px-4">
+          <div className="mt-10 rounded-2xl border border-blue-100 bg-white px-2 shadow-sm sm:px-4">
             {services.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
@@ -41,14 +44,14 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="bg-paper-deep py-16 lg:py-20">
+      <section className="bg-white py-16 lg:py-20">
         <div className="section-container">
-          <Reveal className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-ink-800 p-8 sm:flex-row sm:items-center sm:p-10">
+          <Reveal className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-blue-100 bg-[#f8fafc] p-8 shadow-sm sm:flex-row sm:items-center sm:p-10">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                 Not sure which service you need?
               </h2>
-              <p className="mt-2 max-w-md text-ink-200">
+              <p className="mt-2 max-w-md text-slate-600">
                 Send us your course name and deadline on WhatsApp — we'll
                 tell you exactly what we can do.
               </p>
@@ -57,7 +60,7 @@ export default function Services() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-sage-500 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-sage-600 hover:shadow-lift"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-emerald-600 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-emerald-700"
             >
               <MessageCircle size={18} />
               Chat on WhatsApp
