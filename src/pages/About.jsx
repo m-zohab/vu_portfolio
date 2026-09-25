@@ -40,7 +40,7 @@ export default function About() {
         description="We turned four semesters of our own coursework into a service that helps other VU students finish theirs — on time, and properly understood."
       />
 
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-paper py-20 lg:py-28">
         <div className="section-container">
           <Reveal>
             <SectionHeading
@@ -61,7 +61,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="bg-paper py-20 lg:py-28">
+      <section className="bg-paper-deep py-20 lg:py-28">
         <div className="section-container">
           <Reveal>
             <SectionHeading
@@ -73,14 +73,14 @@ export default function About() {
           <div className="mt-12 grid gap-8 sm:grid-cols-3">
             {VALUES.map((value, index) => (
               <Reveal key={value.title} delay={index * 100}>
-                <div className="rounded-2xl border border-ink-100 bg-white p-7 text-center shadow-soft">
-                  <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-ink-100 text-ink-700">
+                <div className="rounded-2xl border border-white/10 bg-ink-800 p-7 text-center shadow-lift">
+                  <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-gold-400">
                     <value.icon size={22} strokeWidth={2} />
                   </span>
-                  <h3 className="mt-5 font-display text-base font-semibold text-ink-950">
+                  <h3 className="mt-5 font-display text-base font-semibold text-white">
                     {value.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-500">
+                  <p className="mt-2 text-sm leading-relaxed text-ink-200">
                     {value.description}
                   </p>
                 </div>
