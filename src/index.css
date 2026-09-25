@@ -8,14 +8,14 @@
   }
 
   body {
-    @apply bg-paper font-sans text-ink-700 antialiased;
+    @apply bg-paper font-sans text-ink-200 antialiased;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-display text-ink-950;
+    @apply font-display text-white;
   }
 
   /* Visible keyboard focus everywhere — accessibility baseline */
@@ -23,7 +23,7 @@
   button:focus-visible,
   input:focus-visible,
   textarea:focus-visible {
-    @apply outline-none ring-2 ring-ink-500 ring-offset-2 ring-offset-paper;
+    @apply outline-none ring-2 ring-gold-500 ring-offset-2 ring-offset-paper;
   }
 }
 
@@ -38,15 +38,15 @@
     @apply scroll-mt-20;
   }
 
-  /* Faint ruled-notebook texture, used once behind the hero — grounds the
-     "academic" identity without competing with the content on top. */
+  /* Faint grid texture, used behind hero/page banners — light lines on the
+     new dark-blue background instead of dark lines on light. */
   .grid-texture {
     background-image: linear-gradient(
         to right,
-        rgba(27, 26, 59, 0.05) 1px,
+        rgba(255, 255, 255, 0.06) 1px,
         transparent 1px
       ),
-      linear-gradient(to bottom, rgba(27, 26, 59, 0.05) 1px, transparent 1px);
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 }
