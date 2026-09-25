@@ -41,10 +41,11 @@ export default {
           500: "#2E9E6D",
           600: "#25845A",
         },
-        // Warm-cool neutral page background — quieter than pure white.
+        // Page background — a rich dark navy blue (per client request),
+        // with "deep" used for alternating sections.
         paper: {
-          DEFAULT: "#F6F6F4",
-          deep: "#ECEBF3",
+          DEFAULT: "#161A3D",
+          deep: "#1F2350",
         },
       },
       boxShadow: {
