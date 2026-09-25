@@ -20,11 +20,6 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  // No backend is wired up yet, so submitting builds a pre-filled mailto:
-  // link and opens the visitor's own email client — it works today with
-  // zero configuration. To collect messages directly on a server instead,
-  // swap this handler for a request to a form service like Formspree or
-  // EmailJS (both have generous free tiers and a few lines of setup).
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -50,20 +45,23 @@ export default function Contact() {
         description="Tell us about your project, assignment or LMS course — we usually reply within a few hours."
       />
 
-      <section className="bg-paper py-16 lg:py-24">
-        <div className="section-container grid gap-10 lg:grid-cols-2 lg:gap-16">
+      <section className="relative overflow-hidden bg-[#f3f7fc] py-16 lg:py-24">
+        {/* Subtle background grid */}
+        <div className="grid-texture pointer-events-none absolute inset-0 opacity-50" />
+
+        <div className="section-container relative grid gap-10 lg:grid-cols-2 lg:gap-16">
           {/* ── Direct contact info ─────────────────────────────────── */}
           <Reveal direction="left" className="space-y-5">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-800 p-5 transition-colors hover:border-white/25"
+              className="flex items-center gap-4 rounded-2xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-gold-400">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                 <Mail size={20} />
               </span>
               <div>
-                <p className="text-sm font-semibold text-white">Email us</p>
-                <p className="text-sm text-ink-200">{siteConfig.email}</p>
+                <p className="text-sm font-semibold text-slate-900">Email us</p>
+                <p className="text-sm text-slate-600">{siteConfig.email}</p>
               </div>
             </a>
 
@@ -71,28 +69,28 @@ export default function Contact() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-800 p-5 transition-colors hover:border-sage-500/40"
+              className="flex items-center gap-4 rounded-2xl border border-blue-100 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-md"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-sage-500">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600">
                 <MessageCircle size={20} />
               </span>
               <div>
-                <p className="text-sm font-semibold text-white">
+                <p className="text-sm font-semibold text-slate-900">
                   Message us on WhatsApp
                 </p>
-                <p className="text-sm text-ink-200">Fastest way to reach us</p>
+                <p className="text-sm text-slate-600">Fastest way to reach us</p>
               </div>
             </a>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-800 p-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-gold-400">
+            <div className="flex items-center gap-4 rounded-2xl border border-blue-100 bg-white p-5 shadow-sm">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
                 <MapPin size={20} />
               </span>
               <div>
-                <p className="text-sm font-semibold text-white">
+                <p className="text-sm font-semibold text-slate-900">
                   Virtual University of Pakistan
                 </p>
-                <p className="text-sm text-ink-200">Remote — we work online</p>
+                <p className="text-sm text-slate-600">Remote — we work online</p>
               </div>
             </div>
           </Reveal>
@@ -101,13 +99,13 @@ export default function Contact() {
           <Reveal direction="right" delay={100}>
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-white/10 bg-ink-800 p-6 shadow-lift sm:p-8"
+              className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm sm:p-8"
             >
               <div className="space-y-5">
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-1.5 block text-sm font-medium text-white"
+                    className="mb-1.5 block text-sm font-medium text-slate-800"
                   >
                     Name
                   </label>
@@ -119,14 +117,14 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-ink-300 focus:border-gold-500"
+                    className="w-full rounded-xl border border-blue-100 bg-slate-50/50 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-600 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-1.5 block text-sm font-medium text-white"
+                    className="mb-1.5 block text-sm font-medium text-slate-800"
                   >
                     Email
                   </label>
@@ -138,14 +136,14 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-ink-300 focus:border-gold-500"
+                    className="w-full rounded-xl border border-blue-100 bg-slate-50/50 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-600 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="mb-1.5 block text-sm font-medium text-white"
+                    className="mb-1.5 block text-sm font-medium text-slate-800"
                   >
                     Message
                   </label>
@@ -157,22 +155,21 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Tell us about your project, course, or deadline..."
-                    className="w-full resize-none rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-ink-300 focus:border-gold-500"
+                    className="w-full resize-none rounded-xl border border-blue-100 bg-slate-50/50 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-600 focus:bg-white focus:outline-none focus:ring-1 focus:ring-blue-600"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-ink-950 transition-colors hover:bg-gold-600"
+                  className="w-full rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-700"
                 >
                   Send message
                 </button>
 
                 {submitted && (
-                  <p className="flex items-center gap-2 text-sm text-sage-500">
+                  <p className="flex items-center gap-2 text-sm font-medium text-emerald-600">
                     <CheckCircle2 size={16} />
-                    Your email app should now be open with the message ready
-                    to send.
+                    Your email app should now be open with the message ready to send.
                   </p>
                 )}
               </div>
