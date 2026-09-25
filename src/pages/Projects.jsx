@@ -36,8 +36,8 @@ export default function Projects() {
                 onClick={() => setActiveCategory(category)}
                 className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
                   activeCategory === category
-                    ? "border-ink-700 bg-ink-700 text-white"
-                    : "border-ink-200 bg-white text-ink-600 hover:border-ink-400 hover:text-ink-900"
+                    ? "border-gold-500 bg-gold-500 text-ink-950"
+                    : "border-white/15 bg-white/5 text-ink-200 hover:border-white/30 hover:text-white"
                 }`}
               >
                 {category}
@@ -59,7 +59,7 @@ export default function Projects() {
           </div>
 
           {filteredProjects.length === 0 && (
-            <p className="mt-10 text-center text-ink-500">
+            <p className="mt-10 text-center text-ink-200">
               No projects in this category yet — check back soon.
             </p>
           )}
