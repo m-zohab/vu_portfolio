@@ -33,7 +33,7 @@ export default function Services() {
             />
           </Reveal>
 
-          <div className="mt-10 rounded-2xl border border-ink-100 bg-paper-deep/40 px-2 sm:px-4">
+          <div className="mt-10 rounded-2xl border border-white/10 bg-ink-800/40 px-2 sm:px-4">
             {services.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
@@ -41,14 +41,14 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-paper-deep py-16 lg:py-20">
         <div className="section-container">
-          <Reveal className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-ink-100 bg-paper p-8 sm:flex-row sm:items-center sm:p-10">
+          <Reveal className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-ink-800 p-8 sm:flex-row sm:items-center sm:p-10">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 Not sure which service you need?
               </h2>
-              <p className="mt-2 max-w-md text-ink-500">
+              <p className="mt-2 max-w-md text-ink-200">
                 Send us your course name and deadline on WhatsApp — we'll
                 tell you exactly what we can do.
               </p>
