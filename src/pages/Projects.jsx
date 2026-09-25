@@ -25,8 +25,11 @@ export default function Projects() {
         description="A sample of final year projects and freelance builds across mobile, web, AI/ML, programming and databases."
       />
 
-      <section className="bg-paper py-16 lg:py-24">
-        <div className="section-container">
+      <section className="relative overflow-hidden bg-[#f3f7fc] py-16 lg:py-24">
+        {/* Subtle background grid */}
+        <div className="grid-texture pointer-events-none absolute inset-0 opacity-50" />
+
+        <div className="section-container relative">
           {/* Filter tabs */}
           <div className="flex flex-wrap gap-2">
             {projectCategories.map((category) => (
@@ -34,10 +37,10 @@ export default function Projects() {
                 key={category}
                 type="button"
                 onClick={() => setActiveCategory(category)}
-                className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                className={`rounded-full border px-4 py-2 text-sm font-medium transition-all ${
                   activeCategory === category
-                    ? "border-gold-500 bg-gold-500 text-ink-950"
-                    : "border-white/15 bg-white/5 text-ink-200 hover:border-white/30 hover:text-white"
+                    ? "border-blue-600 bg-blue-600 text-white shadow-sm"
+                    : "border-blue-100 bg-white text-slate-600 hover:border-blue-300 hover:text-slate-900"
                 }`}
               >
                 {category}
@@ -59,7 +62,7 @@ export default function Projects() {
           </div>
 
           {filteredProjects.length === 0 && (
-            <p className="mt-10 text-center text-ink-200">
+            <p className="mt-10 text-center text-slate-500">
               No projects in this category yet — check back soon.
             </p>
           )}
