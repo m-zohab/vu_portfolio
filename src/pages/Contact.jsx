@@ -50,20 +50,20 @@ export default function Contact() {
         description="Tell us about your project, assignment or LMS course — we usually reply within a few hours."
       />
 
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-paper py-16 lg:py-24">
         <div className="section-container grid gap-10 lg:grid-cols-2 lg:gap-16">
           {/* ── Direct contact info ─────────────────────────────────── */}
           <Reveal direction="left" className="space-y-5">
             <a
               href={`mailto:${siteConfig.email}`}
-              className="flex items-center gap-4 rounded-2xl border border-ink-100 bg-paper p-5 transition-colors hover:border-ink-200 hover:bg-ink-50/50"
+              className="flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-800 p-5 transition-colors hover:border-white/25"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-ink-700 shadow-soft">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-gold-400">
                 <Mail size={20} />
               </span>
               <div>
-                <p className="text-sm font-semibold text-ink-950">Email us</p>
-                <p className="text-sm text-ink-500">{siteConfig.email}</p>
+                <p className="text-sm font-semibold text-white">Email us</p>
+                <p className="text-sm text-ink-200">{siteConfig.email}</p>
               </div>
             </a>
 
@@ -71,28 +71,28 @@ export default function Contact() {
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 rounded-2xl border border-ink-100 bg-paper p-5 transition-colors hover:border-sage-100 hover:bg-sage-100/40"
+              className="flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-800 p-5 transition-colors hover:border-sage-500/40"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-sage-500 shadow-soft">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-sage-500">
                 <MessageCircle size={20} />
               </span>
               <div>
-                <p className="text-sm font-semibold text-ink-950">
+                <p className="text-sm font-semibold text-white">
                   Message us on WhatsApp
                 </p>
-                <p className="text-sm text-ink-500">Fastest way to reach us</p>
+                <p className="text-sm text-ink-200">Fastest way to reach us</p>
               </div>
             </a>
 
-            <div className="flex items-center gap-4 rounded-2xl border border-ink-100 bg-paper p-5">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white text-ink-500 shadow-soft">
+            <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-800 p-5">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/10 text-gold-400">
                 <MapPin size={20} />
               </span>
               <div>
-                <p className="text-sm font-semibold text-ink-950">
+                <p className="text-sm font-semibold text-white">
                   Virtual University of Pakistan
                 </p>
-                <p className="text-sm text-ink-500">Remote — we work online</p>
+                <p className="text-sm text-ink-200">Remote — we work online</p>
               </div>
             </div>
           </Reveal>
@@ -101,13 +101,13 @@ export default function Contact() {
           <Reveal direction="right" delay={100}>
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-ink-100 bg-white p-6 shadow-soft sm:p-8"
+              className="rounded-2xl border border-white/10 bg-ink-800 p-6 shadow-lift sm:p-8"
             >
               <div className="space-y-5">
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-1.5 block text-sm font-medium text-ink-700"
+                    className="mb-1.5 block text-sm font-medium text-white"
                   >
                     Name
                   </label>
@@ -119,14 +119,14 @@ export default function Contact() {
                     value={form.name}
                     onChange={handleChange}
                     placeholder="Your full name"
-                    className="w-full rounded-xl border border-ink-200 px-4 py-2.5 text-sm text-ink-800 placeholder:text-ink-300 focus:border-ink-500"
+                    className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-ink-300 focus:border-gold-500"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-1.5 block text-sm font-medium text-ink-700"
+                    className="mb-1.5 block text-sm font-medium text-white"
                   >
                     Email
                   </label>
@@ -138,14 +138,14 @@ export default function Contact() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-ink-200 px-4 py-2.5 text-sm text-ink-800 placeholder:text-ink-300 focus:border-ink-500"
+                    className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-ink-300 focus:border-gold-500"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="message"
-                    className="mb-1.5 block text-sm font-medium text-ink-700"
+                    className="mb-1.5 block text-sm font-medium text-white"
                   >
                     Message
                   </label>
@@ -157,19 +157,19 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     placeholder="Tell us about your project, course, or deadline..."
-                    className="w-full resize-none rounded-xl border border-ink-200 px-4 py-2.5 text-sm text-ink-800 placeholder:text-ink-300 focus:border-ink-500"
+                    className="w-full resize-none rounded-xl border border-white/15 bg-white/5 px-4 py-2.5 text-sm text-white placeholder:text-ink-300 focus:border-gold-500"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-ink-700 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-ink-800"
+                  className="w-full rounded-full bg-gold-500 px-6 py-3 text-sm font-semibold text-ink-950 transition-colors hover:bg-gold-600"
                 >
                   Send message
                 </button>
 
                 {submitted && (
-                  <p className="flex items-center gap-2 text-sm text-sage-600">
+                  <p className="flex items-center gap-2 text-sm text-sage-500">
                     <CheckCircle2 size={16} />
                     Your email app should now be open with the message ready
                     to send.
