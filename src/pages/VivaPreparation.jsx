@@ -32,7 +32,7 @@ export default function VivaPreparation() {
       />
 
       {/* What's included */}
-      <section className="bg-white py-20 lg:py-28">
+      <section className="bg-paper py-20 lg:py-28">
         <div className="section-container">
           <Reveal>
             <SectionHeading title="What's included" />
@@ -43,14 +43,14 @@ export default function VivaPreparation() {
               const Icon = ICONS[index % ICONS.length];
               return (
                 <Reveal key={item.title} delay={index * 80}>
-                  <div className="flex h-full flex-col rounded-2xl border border-ink-100 bg-paper p-7">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-ink-100 text-ink-700">
+                  <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-ink-800 p-7">
+                    <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-gold-400">
                       <Icon size={20} strokeWidth={2} />
                     </span>
-                    <h3 className="mt-5 font-display text-base font-semibold text-ink-950">
+                    <h3 className="mt-5 font-display text-base font-semibold text-white">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-500">
+                    <p className="mt-2 text-sm leading-relaxed text-ink-200">
                       {item.description}
                     </p>
                   </div>
@@ -62,7 +62,7 @@ export default function VivaPreparation() {
       </section>
 
       {/* Process — a genuine sequence, so numbered steps earn their place */}
-      <section className="bg-paper py-20 lg:py-28">
+      <section className="bg-paper-deep py-20 lg:py-28">
         <div className="section-container">
           <Reveal>
             <SectionHeading
@@ -72,19 +72,19 @@ export default function VivaPreparation() {
           </Reveal>
 
           <div className="relative mt-14">
-            <div className="absolute left-5 top-2 hidden h-[calc(100%-2rem)] w-px bg-ink-200 sm:block" />
+            <div className="absolute left-5 top-2 hidden h-[calc(100%-2rem)] w-px bg-white/15 sm:block" />
             <div className="space-y-10">
               {vivaPrep.process.map((item, index) => (
                 <Reveal key={item.step} direction="left" delay={index * 100}>
                   <div className="relative flex gap-6 pl-0 sm:pl-0">
-                    <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-ink-700 font-display text-sm font-bold text-white">
+                    <span className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gold-500 font-display text-sm font-bold text-ink-950">
                       {index + 1}
                     </span>
                     <div className="pt-1">
-                      <h3 className="font-display text-base font-semibold text-ink-950">
+                      <h3 className="font-display text-base font-semibold text-white">
                         {item.step}
                       </h3>
-                      <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-ink-500">
+                      <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-ink-200">
                         {item.description}
                       </p>
                     </div>
@@ -96,14 +96,14 @@ export default function VivaPreparation() {
         </div>
       </section>
 
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-paper py-16 lg:py-20">
         <div className="section-container">
-          <Reveal className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-ink-100 bg-paper p-8 sm:flex-row sm:items-center sm:p-10">
+          <Reveal className="flex flex-col items-start justify-between gap-6 rounded-3xl border border-white/10 bg-ink-800 p-8 sm:flex-row sm:items-center sm:p-10">
             <div>
-              <h2 className="text-2xl font-bold tracking-tight text-ink-950 sm:text-3xl">
+              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 Book your mock viva
               </h2>
-              <p className="mt-2 max-w-md text-ink-500">
+              <p className="mt-2 max-w-md text-ink-200">
                 Tell us your defense date and we'll fit a session in before
                 it.
               </p>
