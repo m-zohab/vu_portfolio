@@ -20,31 +20,31 @@ export default function Navbar() {
 
   const linkClasses = ({ isActive }) =>
     `relative text-sm font-medium transition-colors ${
-      isActive ? "text-ink-700" : "text-ink-500 hover:text-ink-700"
-    } after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:rounded-full after:bg-gold-500 after:transition-all after:duration-300 ${
+      isActive ? "text-white" : "text-ink-200 hover:text-white"
+    } after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:rounded-full after:bg-gold-400 after:transition-all after:duration-300 ${
       isActive ? "after:w-full" : "after:w-0 hover:after:w-full"
     }`;
 
   const mobileLinkClasses = ({ isActive }) =>
     `rounded-lg px-3 py-2.5 text-sm font-medium ${
       isActive
-        ? "bg-ink-50 text-ink-700"
-        : "text-ink-500 hover:bg-ink-50 hover:text-ink-700"
+        ? "bg-white/10 text-white"
+        : "text-ink-200 hover:bg-white/5 hover:text-white"
     }`;
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-paper/90 backdrop-blur-md transition-shadow duration-300 ${
-        isScrolled ? "shadow-soft" : ""
+      className={`sticky top-0 z-50 w-full bg-paper/95 backdrop-blur-md transition-shadow duration-300 ${
+        isScrolled ? "shadow-lift" : ""
       }`}
     >
       <nav className="section-container flex h-16 items-center justify-between lg:h-20">
         {/* Brand */}
         <NavLink to="/" className="flex shrink-0 items-center gap-2">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-ink-700 text-white">
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gold-500 text-ink-950">
             <GraduationCap size={20} strokeWidth={2.25} />
           </span>
-          <span className="font-display text-lg font-bold text-ink-950">
+          <span className="font-display text-lg font-bold text-white">
             {siteConfig.brandName}
           </span>
         </NavLink>
@@ -61,7 +61,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <NavLink
           to="/contact"
-          className="hidden rounded-full bg-ink-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-ink-800 md:inline-flex"
+          className="hidden rounded-full bg-ink-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-ink-500 md:inline-flex"
         >
           Contact
         </NavLink>
@@ -70,7 +70,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
-          className="inline-flex items-center justify-center rounded-lg p-2 text-ink-700 hover:bg-ink-50 md:hidden"
+          className="inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-white/10 md:hidden"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
@@ -81,7 +81,7 @@ export default function Navbar() {
       {/* Mobile menu panel */}
       <div
         className={`overflow-hidden bg-paper transition-[max-height] duration-300 ease-in-out md:hidden ${
-          isOpen ? "max-h-96 border-t border-ink-100" : "max-h-0"
+          isOpen ? "max-h-96 border-t border-white/10" : "max-h-0"
         }`}
       >
         <div className="section-container flex flex-col gap-1 py-4">
@@ -99,7 +99,7 @@ export default function Navbar() {
           <NavLink
             to="/contact"
             onClick={handleLinkClick}
-            className="mt-2 rounded-full bg-ink-700 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-ink-800"
+            className="mt-2 rounded-full bg-ink-600 px-4 py-2.5 text-center text-sm font-semibold text-white hover:bg-ink-500"
           >
             Contact
           </NavLink>
